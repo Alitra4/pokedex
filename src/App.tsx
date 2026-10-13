@@ -1,12 +1,10 @@
-import "./App.css";
+import './App.css'
 
-import MyTitle from "./MyTitle.tsx";
+import PokemonCard from "./components/PokemonCard.tsx";
 
 function App() {
   return (
-    <section>
-      <MyTitle />
-    </section>
+    <div><PokemonCard /></div>
   );
 }
 
