@@ -25,14 +25,20 @@ function App() {
 
   return (
     <div>
-      <nav>
-        <button type="button" onClick={() => setPokemonName("bulbasaur")}>
-          bulbasaur
-        </button>
-        <button type="button" onClick={() => setPokemonName("mew")}>
-          mew
-        </button>
-      </nav>
+      {pokemonList.map((article) => (
+        <nav key={pokemon.name}>
+          <button type="button" onClick={() => setPokemonName("pokemon.name")}>
+            {pokemon.name}
+          </button>
+
+          {/* <button type="button" onClick={() => setPokemonName("bulbasaur")}>
+              bulbasaur
+            </button>
+            <button type="button" onClick={() => setPokemonName("mew")}>
+              mew
+            </button> */}
+        </nav>
+      ))}
       <PokemonCard pokemon={pokemon} />
     </div>
   );
