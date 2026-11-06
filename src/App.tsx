@@ -39,13 +39,14 @@ function App() {
   }
 
   return (
-    <div>
+    <div className="hero-div">
       <nav>
         {pokemonList.map((onePokemonFromTheList) => (
           <button
             key={onePokemonFromTheList.name}
             type="button"
             onClick={() => setPokemonName(onePokemonFromTheList.name)}
+            className="hero-bouton"
           >
             {onePokemonFromTheList.name}
           </button>

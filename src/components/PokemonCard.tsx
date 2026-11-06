@@ -1,3 +1,5 @@
+import "../css/PokemonCard.css";
+
 interface PokemonCardsProps {
   pokemon: {
     name: string;
@@ -7,13 +9,17 @@ interface PokemonCardsProps {
 
 function PokemonCard({ pokemon }: PokemonCardsProps) {
   return (
-    <figure>
+    <figure className="PokemonCard-figure">
       {pokemon.imgSrc != null ? (
-        <img src={pokemon.imgSrc} alt={pokemon.name} />
+        <img
+          src={pokemon.imgSrc}
+          alt={pokemon.name}
+          className="PokemonCard-image"
+        />
       ) : (
         <p>???</p>
       )}
-      <figcaption>{pokemon.name}</figcaption>
+      <figcaption className="PokemonCard-titre">{pokemon.name}</figcaption>
     </figure>
   );
 }
